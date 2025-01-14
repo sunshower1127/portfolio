@@ -70,7 +70,15 @@ function App() {
         <h2>Selenium Wrapper</h2>
         <GithubLink repoName="selenium-wrapper-3" />
         <p>Python Selenium 편의성 라이브러리</p>
-        <p className="bg-zinc-700 text-white p-1 font-serif">pip install selenium-wrapper-3</p>
+        <a
+          href="https://pypi.org/project/Selenium-Wrapper-3/"
+          target="_blank"
+          rel="noreferrer"
+          className="bg-zinc-700 text-white p-1 font-serif text-sm hover:cursor-grab hover:opacity-90"
+        >
+          pip install selenium-wrapper-3
+        </a>
+        <SeleniumCode />
         <div className="text-center">
           <b>기술 스택</b>
           <p>Python, 정규식</p>
@@ -79,7 +87,6 @@ function App() {
           <b>배운점</b>
           <p>Selenium 이해도 향상, 정규식 이해도 향상</p>
         </div>
-        <SeleniumCode />
       </ProjectSection>
       <ProjectSection>
         <h2>Challenges in Programmers</h2>

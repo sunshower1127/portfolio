@@ -15,14 +15,13 @@ export default function ProjectSection({
       viewport={{
         once: false, // 매번 애니메이션 실행
         margin: "-100px", // 뷰포트 경계 설정
-        amount: "some", // 30% 이상 보일 때 트리거
       }}
       transition={{
         duration: 0.5, // 0.5초
         ease: "easeOut", // 부드러운 감속
         delay: 0.2, // 0.2초 지연
       }}
-      className={clsx("flex flex-col items-center pt-5 pb-20 [&_]:gap-10", { "bg-zinc-100": zink }, className)}
+      className={clsx("flex flex-col items-center pt-5 pb-40 [&_]:gap-10", { "bg-zinc-100": zink }, className)}
       {...props}
     >
       {children}
