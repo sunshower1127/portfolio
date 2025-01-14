@@ -4,12 +4,12 @@ export default function PortfolioHeader() {
   return (
     <motion.h1
       initial={{
-        fontSize: "50rem",
+        fontSize: "50vw",
         height: "100vh",
       }}
       animate={{
-        fontSize: "7rem",
-        height: "7rem",
+        fontSize: "15vw",
+        height: "15vw",
         marginTop: "4rem",
         marginBottom: "5rem",
       }}

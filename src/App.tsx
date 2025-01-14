@@ -16,8 +16,8 @@ function App() {
   return (
     <main className="flex flex-col">
       <PortfolioHeader />
-      <article className="bg-sky-600 text-white flex flex-col items-center gap-4 pt-4 pb-5 mb-10">
-        <p className="font-serif text-3xl -mb-1">김선우</p>
+      <article className="bg-sky-600 text-white flex flex-col items-center gap-3 pt-4 pb-5 mb-10">
+        <p className="font-serif text-2xl -mb-1 thin">김선우</p>
         <p className="font-serif">
           Dreaming in <b>Frontend Developer</b>
         </p>
@@ -29,11 +29,16 @@ function App() {
         <h2>Gpttuie</h2>
         <h3>AI 기반 레시피 생성 서비스</h3>
         <div className="inline-flex flex-wrap gap-10 w-auto justify-center">
-          <img
-            src="https://res.cloudinary.com/djf3l9yxq/image/upload/v1736835483/gpttuie/pc.png"
-            className="w-[60rem] rounded-lg shadow"
-            alt=""
-          />
+          <div className="overflow-hidden">
+            <img
+              src="https://res.cloudinary.com/djf3l9yxq/image/upload/v1736835483/gpttuie/pc.png"
+              className="relative w-[60rem] rounded-lg shadow scale-125 md:scale-100 h-full"
+              style={{
+                transformOrigin: "top center",
+              }}
+              alt=""
+            />
+          </div>
           <ClickableViewer images={Array.from({ length: 12 }).map((_, i) => `${URL}/${i + 1}.png`)} />
         </div>
         <div className="flex flex-col items-center gap-2">
@@ -109,7 +114,7 @@ function App() {
         <p>React를 이용한 Netflix 클론 프로젝트</p>
         <div className="text-center">
           <b>기술 스택</b>
-          <p>React, Next, React-Router, Sass, Storybook, Tailwind, React-Query, TypeScript, Zustand</p>
+          <p>React...</p>
         </div>
         <p>직접 하나부터 열까지 구현해보고 실전성 획득</p>
         <p>현재 진행중... 🚧</p>
