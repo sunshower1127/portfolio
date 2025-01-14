@@ -3,11 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  a {
-    @apply text-blue-500;
-    @apply underline;
+  body {
+    @apply font-sans;
+    @apply font-extralight;
   }
-  .flex {
-    @apply gap-2;
+
+  p {
+    @apply text-base;
+  }
+
+  h1 {
+    @apply text-9xl font-serif;
+  }
+
+  h2 {
+    @apply text-5xl font-serif mb-5;
   }
 }
