@@ -22,7 +22,7 @@ export default function ProjectSection({
         ease: "easeOut", // 부드러운 감속
         delay: 0.2, // 0.2초 지연
       }}
-      className={clsx("flex flex-col items-center pb-20 [&_]:gap-2", { "bg-zinc-100": zink }, className)}
+      className={clsx("flex flex-col items-center pt-5 pb-20 [&_]:gap-10", { "bg-zinc-100": zink }, className)}
       {...props}
     >
       {children}

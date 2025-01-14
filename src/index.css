@@ -4,8 +4,7 @@
 
 @layer base {
   body {
-    @apply font-sans;
-    @apply font-extralight;
+    @apply font-sans font-extralight text-zinc-900;
   }
 
   p {
@@ -13,10 +12,14 @@
   }
 
   h1 {
-    @apply text-9xl font-serif;
+    @apply text-9xl font-serif text-zinc-600;
   }
 
   h2 {
-    @apply text-5xl font-serif mb-5;
+    @apply text-5xl font-serif;
+  }
+
+  h3 {
+    @apply text-lg font-serif;
   }
 }

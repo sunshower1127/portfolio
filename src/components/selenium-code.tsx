@@ -3,21 +3,39 @@ import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function SeleniumCode() {
   return (
-    <div className="w-1/2 shadow-2xl">
-      <SyntaxHighlighter
-        language="python"
-        style={oneDark}
-        showLineNumbers={true}
-        wrapLines={true}
-        className="rounded-md text-xs"
-      >
-        {code}
-      </SyntaxHighlighter>
+    <div className="flex gap-5 flex-wrap justify-center">
+      <div>
+        <p className="text-center text-xl font-serif">Before</p>
+        <SyntaxHighlighter
+          className="w-[40rem] h-[50rem] shadow-2xl rounded-md text-xs"
+          language="python"
+          style={oneDark}
+          showLineNumbers={true}
+          wrapLines={true}
+        >
+          {beforeCode}
+        </SyntaxHighlighter>
+      </div>
+      <div>
+        <p className="text-center text-xl font-serif">After</p>
+        <SyntaxHighlighter
+          language="python"
+          style={oneDark}
+          showLineNumbers={true}
+          wrapLines={true}
+          className="w-[40rem] h-[50rem] shadow-2xl rounded-md text-xs"
+        >
+          {afterCode}
+        </SyntaxHighlighter>
+      </div>
     </div>
   );
 }
 
-const code = `
+const beforeCode = `
+`;
+
+const afterCode = `
 
 from time import sleep
 
