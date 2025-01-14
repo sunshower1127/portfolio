@@ -1,9 +1,9 @@
 import { preload } from "react-dom";
 
-import { motion } from "framer-motion";
 import ClickableViewer from "./components/clickable-viewer";
 import GithubLink from "./components/github-link";
 import Link from "./components/link";
+import PortfolioHeader from "./components/portfolio-hearder";
 import ProjectSection from "./components/project-section";
 import SeleniumCode from "./components/selenium-code";
 
@@ -15,29 +15,14 @@ function App() {
   }
   return (
     <main className="flex flex-col">
-      <motion.h1
-        initial={{
-          fontSize: "20vw",
-          height: "100vh",
-          marginBottom: "2.5rem",
-        }}
-        animate={{
-          fontSize: "8rem",
-          height: "10rem",
-        }}
-        transition={{
-          duration: 3.0,
-          ease: "circInOut",
-        }}
-        className="text-center"
-      >
-        Portfolio
-      </motion.h1>
-      <article className="bg-zinc-100 pb-20 flex flex-col items-center gap-2 pt-5">
-        <p className="font-serif text-2xl">김선우</p>
-        <p className="font-serif">Frontend Developer</p>
-        <br />
-        <p>숭실대학교 소프트웨어학부 4학년 재학중(2020 - )</p>
+      <PortfolioHeader />
+      <article className="bg-sky-600 text-white flex flex-col items-center gap-4 pt-4 pb-5 mb-10">
+        <p className="font-serif text-3xl -mb-1">김선우</p>
+        <p className="font-serif">
+          Dreaming in <b>Frontend Developer</b>
+        </p>
+
+        <p className="font-serif text-sm font-light">숭실대학교 소프트웨어학부 4학년 재학중</p>
       </article>
 
       <ProjectSection>
@@ -78,6 +63,7 @@ function App() {
         >
           pip install selenium-wrapper-3
         </a>
+
         <SeleniumCode />
         <div className="text-center">
           <b>기술 스택</b>

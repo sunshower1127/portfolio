@@ -12,11 +12,11 @@
   }
 
   h1 {
-    @apply text-9xl font-serif text-zinc-600;
+    @apply text-9xl font-serif text-zinc-700;
   }
 
   h2 {
-    @apply text-5xl font-serif;
+    @apply text-5xl font-serif text-center text-zinc-800;
   }
 
   h3 {

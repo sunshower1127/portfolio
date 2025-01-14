@@ -3,30 +3,36 @@ import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function SeleniumCode() {
   return (
-    <div className="flex gap-5 flex-wrap justify-center">
-      <div>
-        <p className="text-center text-xl font-serif">Before</p>
-        <SyntaxHighlighter
-          className="w-[40rem] h-[41rem] shadow-2xl rounded-md text-xs"
-          language="python"
-          style={oneDark}
-          showLineNumbers={true}
-          wrapLines={true}
-        >
-          {beforeCode}
-        </SyntaxHighlighter>
+    <div>
+      <div className="flex text-center font-serif mb-3 text-lg justify-center flex-wrap">
+        <div>구글 검색창에 들어가 텍스트를 입력하고, </div>
+        <div>2번째 포스트를 클릭하는 시나리오</div>
       </div>
-      <div>
-        <p className="text-center text-xl font-serif">After</p>
-        <SyntaxHighlighter
-          language="python"
-          style={oneDark}
-          showLineNumbers={true}
-          wrapLines={true}
-          className="w-[40rem] h-[41rem] shadow-2xl rounded-md text-xs"
-        >
-          {afterCode}
-        </SyntaxHighlighter>
+      <div className="flex gap-5 flex-wrap justify-center">
+        <div>
+          <p className="text-center text-xl font-serif">Before</p>
+          <SyntaxHighlighter
+            className="w-[90vw] lg:w-[45vw] max-w-[36rem] h-[43rem] shadow-2xl rounded-md text-xs"
+            language="python"
+            style={oneDark}
+            showLineNumbers={true}
+            wrapLines={true}
+          >
+            {beforeCode}
+          </SyntaxHighlighter>
+        </div>
+        <div>
+          <p className="text-center text-xl font-serif">After</p>
+          <SyntaxHighlighter
+            language="python"
+            style={oneDark}
+            showLineNumbers={true}
+            wrapLines={true}
+            className="w-[90vw] lg:w-[45vw] max-w-[36rem] h-[19rem] lg:h-[43rem] shadow-2xl rounded-md text-xs"
+          >
+            {afterCode}
+          </SyntaxHighlighter>
+        </div>
       </div>
     </div>
   );
@@ -51,13 +57,14 @@ search_box = WebDriverWait(driver, 10).until(
 )
 
 # 검색어 입력
-search_box.send_keys("파이썬 selenium")
+search_box.send_keys("검색 텍스트")
 
 # Enter 키 입력으로 검색 실행
 search_box.send_keys(Keys.RETURN)
 
 # 결과 페이지 로딩 대기
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "search")))
+WebDriverWait(driver, 10)
+  .until(EC.presence_of_element_located((By.ID, "search")))
 
 # 두 번째 검색 결과 찾기 및 클릭
 search_results = WebDriverWait(driver, 10).until(
@@ -76,7 +83,7 @@ from selenium_wrapper_3.util import *
 url("https://www.google.com")
 
 # 검색창에 검색어 입력
-send_keys(Textarea(name="q"), ["파이썬 selenium", "\\n"])
+send_keys(Textarea(name="q"), ["검색 텍스트", "\\n"])
 
 # 두 번째 검색 결과 클릭
 click(H3(2) / Parent)
