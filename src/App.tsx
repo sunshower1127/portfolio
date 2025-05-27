@@ -6,6 +6,7 @@ import Link from "./components/link";
 import PortfolioHeader from "./components/portfolio-hearder";
 import ProjectSection from "./components/project-section";
 import SeleniumCode from "./components/selenium-code";
+import { getImageURL } from "./utils";
 
 const URL = "https://res.cloudinary.com/djf3l9yxq/image/upload/v1736772555/gpttuie";
 
@@ -28,6 +29,11 @@ function App() {
       <ProjectSection>
         <h2>Gpttuie</h2>
         <h3>AI 기반 레시피 생성 서비스</h3>
+        <div className="flex flex-col items-center gap-2">
+          <Link url="https://gpttuie.web.app" />
+          <GithubLink repoName="gpttuie-app-with-reactnative" />
+          <GithubLink repoName="gpttuie-web-with-react" />
+        </div>
         <div className="inline-flex flex-wrap gap-10 w-auto justify-center">
           <div className="overflow-hidden">
             <img
@@ -41,11 +47,7 @@ function App() {
           </div>
           <ClickableViewer images={Array.from({ length: 12 }).map((_, i) => `${URL}/${i + 1}.png`)} />
         </div>
-        <div className="flex flex-col items-center gap-2">
-          <Link url="https://gpttuie.web.app" />
-          <GithubLink repoName="gpttuie-app-with-reactnative" />
-          <GithubLink repoName="gpttuie-web-with-react" />
-        </div>
+
         <p>대학교 3학년 1학기 팀 프로젝트</p>
         <div className="text-center">
           <b>기술 스택</b>
@@ -83,7 +85,7 @@ function App() {
         <h2>Challenges in Programmers</h2>
         <GithubLink repoName="challenges-in-programmers" />
         <p>프로그래머스 알고리즘 문제 정리</p>
-        <p>현재 프로그래머스 lvl.2 문제 100개 가량 정리완료</p>
+        <p>현재 프로그래머스 lvl.2 문제 정리완료 및 lvl.3 문제 푸는 중...</p>
         <div className="text-center">
           <b>기술 스택</b>
           <p>Python, 자료구조, 알고리즘</p>
@@ -97,7 +99,7 @@ function App() {
         <h2>Cien Project</h2>
         <GithubLink repoName="cien-project" />
         <p>동아리 키오스크 화면 제작</p>
-        <img className="p-10" src="https://raw.githubusercontent.com/sunshower1127/portfolio/refs/heads/main/docs/kiosk-DxInytIU.png" />
+        <img className="p-10" src={getImageURL("cien-project")} />
         <div className="text-center">
           <b>기술 스택</b>
           <p>React, Tailwind, ReactQuery</p>
@@ -111,7 +113,7 @@ function App() {
         <h2>Netflix Clone</h2>
         <GithubLink repoName="netflix-clone" />
         <p>Netflix의 반응형 슬라이더를 직접 구현해보기</p>
-        <img className="p-10" src="https://github.com/sunshower1127/portfolio/blob/main/docs/netflix-D1G2qe4S.png?raw=true" />
+        <img className="p-10" src={getImageURL("netflix-clone")} />
         <div className="text-center">
           <b>기술 스택</b>
           <p>React, Tailwind, 반응형 CSS</p>
@@ -122,10 +124,7 @@ function App() {
         <h2>Youtube Music Clone</h2>
         <GithubLink repoName="youtube-music-clonee" />
         <p>백엔드부터 프론트엔드까지 유튜브 뮤직 클론 만들기</p>
-        <img
-          className="w-[300px] rounded-2xl shadow-2xl"
-          src="https://github.com/sunshower1127/portfolio/blob/main/docs/youtube-music-DeCa61Bd.png?raw=true"
-        />
+        <img className="w-[300px] rounded-2xl shadow-2xl" src={getImageURL("youtube-music")} />
         <div className="text-center">
           <b>기술 스택</b>
           <p>React, Tailwind, Zustand, PWA, ServiceWorker, Node, Python, S3</p>
@@ -136,6 +135,7 @@ function App() {
         <h2>LMS Auto Bot</h2>
         <GithubLink repoName="lms-auto-bot" />
         <p>싸이버 강의 듣기 자동화</p>
+        <img className="w-[300px]" src={getImageURL("lms-auto-bot")} />
         <div className="text-center">
           <b>기술 스택</b>
           <p>Go, Chromedp(웹자동화)</p>
