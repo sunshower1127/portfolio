@@ -129,13 +129,13 @@ function App() {
           <b>기술 스택</b>
           <p>React, Tailwind, Zustand, PWA, ServiceWorker, Node, Python, S3</p>
         </div>
-        <p>PWA로 만들어서 직접 사용</p>
+        <p>PWA로 만들어서 직접 사용중</p>
       </ProjectSection>
       <ProjectSection>
         <h2>LMS Auto Bot</h2>
         <GithubLink repoName="lms-auto-bot" />
         <p>싸이버 강의 듣기 자동화</p>
-        <img className="w-[300px]" src={getImageURL("lms-auto-bot")} />
+        <img className="w-4/5 max-w-[500px] rounded-xl shadow-2xl" src={getImageURL("lms-auto-bot")} />
         <div className="text-center">
           <b>기술 스택</b>
           <p>Go, Chromedp(웹자동화)</p>
