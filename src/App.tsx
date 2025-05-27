@@ -7,6 +7,10 @@ import PortfolioHeader from "./components/portfolio-hearder";
 import ProjectSection from "./components/project-section";
 import SeleniumCode from "./components/selenium-code";
 
+import kioskImage from "./assets/kiosk.png";
+import netflixImage from "./assets/netflix.png";
+import youtubeMusicImage from "./assets/youtube-music.png";
+
 const URL = "https://res.cloudinary.com/djf3l9yxq/image/upload/v1736772555/gpttuie";
 
 function App() {
@@ -94,30 +98,60 @@ function App() {
         </div>
       </ProjectSection>
       <ProjectSection zink>
-        <h2>Hi Projects</h2>
-        <p>프론트엔드의 다양한 라이브러리와 프레임워크 총정리</p>
-        <GithubLink repoName="hi-projects" />
+        <h2>Cien Project</h2>
+        <GithubLink repoName="cien-project" />
+        <p>동아리 키오스크 화면 제작</p>
+        <img className="p-10" src={kioskImage} />
         <div className="text-center">
           <b>기술 스택</b>
-          <p>
-            React, Next, React-Router, Sass, Storybook, Tailwind, React-Query, TypeScript, Zustand, Framer-Motion
-          </p>
+          <p>React, Tailwind, ReactQuery</p>
         </div>
         <div className="text-center">
           <b>배운점</b>
-          <p>프론트엔드의 다양한 라이브러리 및 프레임워크 공부</p>
+          <p>비동기 fetching 로직 처리, 에러 처리</p>
         </div>
       </ProjectSection>
       <ProjectSection>
-        <h2>Netflix Clone </h2>
+        <h2>Netflix Clone</h2>
         <GithubLink repoName="netflix-clone" />
-        <p>React를 이용한 Netflix 클론 프로젝트</p>
+        <p>Netflix의 반응형 슬라이더를 직접 구현해보기</p>
+        <img className="p-10" src={netflixImage} />
         <div className="text-center">
           <b>기술 스택</b>
-          <p>React...</p>
+          <p>React, Tailwind, 반응형 CSS</p>
         </div>
-        <p>직접 하나부터 열까지 구현해보고 실전성 획득</p>
-        <p>현재 진행중... 🚧</p>
+        <p>무한 스크롤, 반응형 컴포넌트</p>
+      </ProjectSection>
+      <ProjectSection zink>
+        <h2>Youtube Music Clone</h2>
+        <GithubLink repoName="youtube-music-clonee" />
+        <p>백엔드부터 프론트엔드까지 유튜브 뮤직 클론 만들기</p>
+        <img className="w-[300px] rounded-2xl shadow-2xl" src={youtubeMusicImage} />
+        <div className="text-center">
+          <b>기술 스택</b>
+          <p>React, Tailwind, Zustand, PWA, ServiceWorker, Node, Python, S3</p>
+        </div>
+        <p>PWA로 만들어서 직접 사용</p>
+      </ProjectSection>
+      <ProjectSection>
+        <h2>LMS Auto Bot</h2>
+        <GithubLink repoName="lms-auto-bot" />
+        <p>싸이버 강의 듣기 자동화</p>
+        <div className="text-center">
+          <b>기술 스택</b>
+          <p>Go, Chromedp(웹자동화)</p>
+        </div>
+        <p>Go의 병렬 프로그래밍 공부. 웹 자동화 공부</p>
+      </ProjectSection>
+      <ProjectSection zink>
+        <h2>Sunshower Tech Blog(진행중...🚧)</h2>
+        <GithubLink repoName="sunshower-tech-blog" />
+        <p>기술 블로그 직접 제작 후 포스팅 해보기</p>
+        <div className="text-center">
+          <b>기술 스택</b>
+          <p>Next, Supabase, PostgreSQL, Tiptap(리치 텍스트에디터)</p>
+        </div>
+        <p>Next의 서버 컴포넌트, 서버 액션등 공부. Supabase Auth, DB관리</p>
       </ProjectSection>
     </main>
   );
