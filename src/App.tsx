@@ -7,10 +7,6 @@ import PortfolioHeader from "./components/portfolio-hearder";
 import ProjectSection from "./components/project-section";
 import SeleniumCode from "./components/selenium-code";
 
-import kioskImage from "./assets/kiosk.png";
-import netflixImage from "./assets/netflix.png";
-import youtubeMusicImage from "./assets/youtube-music.png";
-
 const URL = "https://res.cloudinary.com/djf3l9yxq/image/upload/v1736772555/gpttuie";
 
 function App() {
@@ -101,7 +97,7 @@ function App() {
         <h2>Cien Project</h2>
         <GithubLink repoName="cien-project" />
         <p>동아리 키오스크 화면 제작</p>
-        <img className="p-10" src={kioskImage} />
+        <img className="p-10" src="https://raw.githubusercontent.com/sunshower1127/portfolio/refs/heads/main/docs/kiosk-DxInytIU.png" />
         <div className="text-center">
           <b>기술 스택</b>
           <p>React, Tailwind, ReactQuery</p>
@@ -115,7 +111,7 @@ function App() {
         <h2>Netflix Clone</h2>
         <GithubLink repoName="netflix-clone" />
         <p>Netflix의 반응형 슬라이더를 직접 구현해보기</p>
-        <img className="p-10" src={netflixImage} />
+        <img className="p-10" src="https://github.com/sunshower1127/portfolio/blob/main/docs/netflix-D1G2qe4S.png?raw=true" />
         <div className="text-center">
           <b>기술 스택</b>
           <p>React, Tailwind, 반응형 CSS</p>
@@ -126,7 +122,10 @@ function App() {
         <h2>Youtube Music Clone</h2>
         <GithubLink repoName="youtube-music-clonee" />
         <p>백엔드부터 프론트엔드까지 유튜브 뮤직 클론 만들기</p>
-        <img className="w-[300px] rounded-2xl shadow-2xl" src={youtubeMusicImage} />
+        <img
+          className="w-[300px] rounded-2xl shadow-2xl"
+          src="https://github.com/sunshower1127/portfolio/blob/main/docs/youtube-music-DeCa61Bd.png?raw=true"
+        />
         <div className="text-center">
           <b>기술 스택</b>
           <p>React, Tailwind, Zustand, PWA, ServiceWorker, Node, Python, S3</p>
